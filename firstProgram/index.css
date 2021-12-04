@@ -32,6 +32,10 @@ button {
     background: darkred;
 }
 
+#decrement-btn {
+    background: goldenrod;
+}
+
 #save-btn {
     background: darkgreen;
 }
