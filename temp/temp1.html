@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="temp1.css">
+</head>
+<body>
+  <div><h1>  <b>BLACKJACK</b> Multiplayer  </h1></div>
+  
+  <div class='dealer'>
+      <h3 id='dealer-msg'> welcome players! i am your dealer today </h3>
+     <button id="start-btn">START GAME</button>
+  </div>
+  
+  <div>
+    <div class='player1-side'>
+      
+      <p id="intro-para1"> please enter 1st player's name: <input id="name1" type="textbox"> </p>
+      <button id="intro-btn1" >Submit</button>
+
+
+     
+      <section id='player1-sec'>
+        <p id="player1-el"></p>
+        <p id="cards-el1"> cards :</p>
+        <p id="sum-el1">sum :</p>
+        <button id='player1-hit' class='player1-buttons'> HIT </button>
+        <button id='player1-stand' class='player1-buttons'> STAND </button>
+        <h3 id='player1-busted' > <b>BUSTED</b> </h3>
+      </section>
+      
+    </div>
+
+
+    <div class='player2-side'>
+      <p id='intro-para2'> please enter 2nd player's name: <input id="name2" type="textbox"> </p> 
+      <button id='intro-btn2' >Submit</button>
+      
+      <section id='player2-sec'>
+        <p id="player2-el"></p>
+        <p id="cards-el2"> cards :</p>
+        <p id="sum-el2">sum :</p>
+        <button id='player2-hit' class='player2-buttons'> HIT </button>
+        <button id='player2-stand' class='player2-buttons'> STAND </button>
+        <h3 id='player2-busted' > <b>BUSTED</b> </h3>
+      </section>
+      
+    </div>
+  </div>
+ 
+ 
+  <script src="temp1.js"></script>
+</body>
+</html>

@@ -1,18 +1,20 @@
 
 let cards = []
-let player = {
-  name: "ankit",
-  chips: 100
+// let player = {
+//   name: "ankit",
+//   chips: 100
+// }
+function Person(name){
+  this.name = name;
+  this.chips = 100;
 }
+let player = new Person("ankit");
+let player2 = new Person("akshay");
 let isAlive = false;
 let hasBlackJack = false;
 let message 
-// let messageEl = document.getElementById("message-el");
-// let sumEl = document.querySelector('#sum-el')
-// let cardsEl = document.querySelector("#cards-el")
-// let playerEl = document.getElementById("player-el")
-//playerEl.textContent = player.name + ": $" + player.chips
-$("#player-el").text(player.name + ": $" + player.chips)
+
+$("#player-el").text(player2.name + ": $" + player2.chips)
 $('#new-card').hide()
 $('#buy-btn').hide()
 
@@ -24,19 +26,16 @@ $('#buy-btn').hide()
           player.chips -= 10
           $('#start-game').hide()
           $('#new-card').show()
-          //playerEl.textContent = player.name + ": $" + player.chips
+          
           $("#player-el").text(player.name + ": $" + player.chips)
           let firstCard = getRandomNumber()
           let secondCard = getRandomNumber()
           cards = [firstCard,secondCard]
-          sum = firstCard + secondCard;
+         // sum = firstCard + secondCard;
     
             renderGame()
       } else {
-        // messageEl.innerText = "you don't have enough chips to start the game"
-        // messageEl.style.color = "red"
-        // $("#message-el").text("you don't have enough chips to start the game").addClass("red");
-        $("#message-el").text("you don't have enough chips to start the game").css('color','red')
+        $("#message-el").text("you don't have enough chips to start the game").css('color', 'red')
         $('#buy-btn').show()
         $('#start-game').hide()
       }
@@ -66,11 +65,9 @@ $('#buy-btn').hide()
         } else if(sum === 21) {
             message = "congratulations! you've got blackjack"
             hasBlackJack = true;
-            player.chips += 100
+            //player.chips += 100
             $('#start-game').show('slow')
             $('#new-card').hide()
-            
-           // playerEl.textContent = player.name + ": $" + player.chips
             $("#player-el").text(player.name + ": $" + player.chips)
         }else {
             message = "you're out of the game!"
@@ -79,7 +76,7 @@ $('#buy-btn').hide()
             $('#new-card').hide()
 
         }
-  // messageEl.innerText = message
+  
     if(message == "congratulations! you've got blackjack") {
       $("#message-el").text(message).css('color','goldenrod')
       alert("congratulations! you've got blackjack")
@@ -88,11 +85,8 @@ $('#buy-btn').hide()
       $("#message-el").text(message).css('color','white') 
     }
 
-    
-   // sumEl.textContent = "sum: " + sum;
      $("#sum-el").text("sum: " + sum)
-   // cardsEl.textContent = "Cards: " + firstCard + " " + secondCard
-    //cardsEl.textContent = "cards: " + cards;
+   
     $("#cards-el").text("cards: " + cards)
     // console.log(isAlive)
     // console.log(hasBlackJack)
