@@ -3,10 +3,10 @@ let cards = []
 let player = {
   name: "ankit",
   chips: 100
-}
+};
 let isAlive = false;
 let hasBlackJack = false;
-let message 
+let message; 
 // let messageEl = document.getElementById("message-el");
 // let sumEl = document.querySelector('#sum-el')
 // let cardsEl = document.querySelector("#cards-el")
